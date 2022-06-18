@@ -1,6 +1,3 @@
-/*
-  Created by: Anton Debner 2016
-*/
 var TankGame = (function() {
   var TARGET_WIDTH = 801; // Desired width
   var TARGET_HEIGHT = 601;
