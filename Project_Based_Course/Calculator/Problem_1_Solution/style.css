@@ -1,0 +1,112 @@
+/*
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+*/
+
+
+
+ body {
+    padding: 0;
+    margin: 0;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: 'ReactiveAnchor-L3L0n', sans-serif;
+
+  }
+
+  .calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    grid-gap: 20px 20px;
+  }
+  
+  
+  .calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: 'ReactiveAnchor-L3L0n', sans-serif;
+    outline: none;
+    background-color: rgba(0, 0, 0, .75);
+    color: #2ca8fd;
+    border-radius: 20px;
+    padding: 0px;
+    /* Adding Transitions; different transitions properties due to compatibility issues in different browsers */
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+    
+  }
+  
+  .calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+    font-family: 'ReactiveAnchor-L3L0n', sans-serif;
+  }
+  
+  .span-two {
+    grid-column: span 2;
+  }
+  
+  .output {
+    grid-column: 1 / -1;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 5px;
+  }
+  
+  .output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+  }
+  
+  .output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+  }
+ 
+#op {
+    background-color: #065caf;
+    color: #28a5fd;
+    font-family: 'ReactiveAnchor-L3L0n', sans-serif;
+    /* Adding Transitions for operator backgrounds*/
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+}
+
+#op:hover {
+  background-color: #0f9;
+}
+
+#misc {
+    background-color: #5f5f60;
+    color: #9d9fa0;
+    font-family: 'ReactiveAnchor-L3L0n', sans-serif;
+    /* Adding Transitions for AC / DEL button backgrounds*/
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+}
+
+#misc:hover {
+  background-color: #0F2027;
+}
