@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOL</title>
+</head>
+<body>
+    <!-- Don't write Javascript in an HTML file!!! 
+        We did this for (your) convenience as the code is short; there isn't html content
+        Do as we say, not as we do. -->
+
+    <!-- We outputed to console. 
+        To check console, right-click and select inspect, then select console
+        or Crtl + Shift + I and select console -->
+    <script type="text/javascript">
+        // Use + operator to declare a multi-line string
+        const companyInfo = 
+            '[' +
+                '{ "companyName": "Walmart",' +
+                '"NumOfEmployees": 2300000,' +
+                '"Revenue": 1.52859e11,' +
+                '"Rating": "Convenient",' +
+                '"usCorp": true' +
+                '},' +
+                '{' +
+                '"companyName": "Spotify",' +
+                '"NumOfEmployees": 6617,' +
+                '"Revenue": 2.33e10,' +
+                '"Rating": "Best Music Streaming Service",' +
+                '"usCorp": false' +
+                '}' +
+            ']';
+
+        //turns JSON string company Info to an object and stores the second entry in 'company1'
+        let company1 = JSON.parse(companyInfo)[1];
+        console.log(company1.companyName + " has " + company1.NumOfEmployees + " employees and generates " + company1.Revenue + " dollars.");
+        // should print Spotify
+    </script>
+</body>
+</html>
